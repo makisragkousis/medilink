@@ -39,9 +39,9 @@ dependencies {
     implementation 'org.flywaydb:flyway-mysql'
     runtimeOnly 'com.mysql:mysql-connector-j'
 
-// --- Security, File Validation & Storage (MinIO) ---
+// --- Security, File Validation & Storage (Floci / S3) ---
     implementation 'org.apache.tika:tika-core:2.9.2'
-    implementation 'io.minio:minio:8.5.14'
+    implementation 'io.awspring.cloud:spring-cloud-aws-starter-s3:3.1.1'
 
 // --- Utilities ---
     compileOnly 'org.projectlombok:lombok'
