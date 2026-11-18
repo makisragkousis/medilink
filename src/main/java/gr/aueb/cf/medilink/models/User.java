@@ -35,6 +35,12 @@ public class User extends AbstractEntity{
     @Column(nullable = false)
     private Role role;
 
+    @OneToOne(mappedBy = "user")
+    private Therapist therapist;
+
+    @OneToOne(mappedBy = "user")
+    private Patient patient;
+
     public User(String username, String keycloakId, Role role) {
         this.username = username;
         this.keycloakId = keycloakId;
